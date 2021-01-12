@@ -1,0 +1,42 @@
+<div class="card">
+    <div class="card-header text-center">
+      <h1>Simple Calculator</h1>
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <h2>Valeur A</h2>
+                <input type="number" class="form-control" [(ngModel)]="num1">
+              </div>
+              <div class="col-sm">
+                <h2>Valeur B</h2>
+                <input type="number" class="form-control" [(ngModel)]="num2">
+              </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row mt-5">
+                <button type="button" class="btn btn-primary btn-lg btn-block" value="+" (click)="somme()">+</button>
+                <button type="button" class="btn btn-secondary btn-lg btn-block" value="-" (click)="soustraction()">-</button>
+                <button type="button" class="btn btn-success btn-lg btn-block" value="*" (click)="multiplication()">*</button>
+                <button type="button" class="btn btn-danger btn-lg btn-block" value="/" (click)="division()">/</button>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h2>Resultat :</h2>
+                </div>
+                <div class="col-sm">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [readonly]="true" value="{{res}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>  
